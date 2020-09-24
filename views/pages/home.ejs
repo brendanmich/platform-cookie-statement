@@ -1,0 +1,60 @@
+<!-- MIT LICENSE -->
+
+<!doctype HTML>
+
+<html lang="en">
+	<head>
+
+		<!-- Google Tag Manager -->
+		<% if (process.env.ENV === "production") { %>
+			<%- include('../components/google_tag_head')  %>
+			<% if (state.consent.analytics_enabled) { %><%- include('../components/hotjar_head') %><% } %>
+		<% } %>
+
+		<!-- Site Meta -->
+		<title>App Name</title>
+		<meta name="description" content="">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+
+		<!-- External Fonts -->
+		<%- include('../components/fonts') %>
+
+		<!-- reCAPTCHA -->
+		<% if (state.consent.performance_enabled) { %><%- include('../components/recaptcha') %><% } %>
+
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="<%= process.env.CDN_URL %>/public/<%= webpack_asset('home','css') %>">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="<%= process.env.CDN_URL %>/public/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<%= process.env.CDN_URL %>/public/img/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body class="preload hide-captcha">
+
+		<!-- Google Tag Manager -->
+		<% if (process.env.ENV === "production") { %>
+			<%- include('../components/google_tag_body')  %>
+		<% } %>
+
+		<!-- Top Tag -->
+        <div id="top"></div>
+
+		<!-- Header -->
+		<%- include('../navigation/header.ejs') %>
+
+		<!-- Content -->
+		<div class="home-page"></div>
+
+		<!-- Footer -->
+		<%- include('../navigation/footer') %>
+
+		<!-- Cookie Bar -->
+		<%- include('../components/cookie_bar') %>
+
+		<!-- Scripts -->
+		<div data-source="<%= dataString %>" id="data-source"></div>
+		<script src="<%= process.env.CDN_URL %>/public/<%= webpack_asset('home','js') %>"></script>
+	</body>
+</html>

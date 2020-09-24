@@ -1,0 +1,21 @@
+<% if (state.show_cookie_bar === true) { // Display cookie consent bar in EU territories %>
+
+	<!-- Cookie Consent Bar -->
+    <div class="cookie-bar screen-overall-padding" id="cookie-consent-bar">
+
+		<!-- Text Container -->
+		<div class="text-container">
+			<p>The site uses cookies to provide you with a more personalized experience. Please read our <a href="/cookie-statement" target="_blank">cookie statement</a> for more information.</p>
+		</div>
+
+		<!-- Button Container -->
+		<div class="button-container">
+
+			<!-- Accept All Cookies -->
+			<button id="cookie-bar-accept-all-action" class="cookie-button solid animate">Accept All<span class="small-screen-span"> Cookies</span></button>
+
+			<!-- Customize Settings -->
+			<button id="cookie-bar-customize-action" class="cookie-button animate">Customize<span class="small-screen-span"> Settings</span></button>
+		</div>
+    </div>
+<% } %>
