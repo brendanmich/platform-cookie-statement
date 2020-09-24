@@ -10,6 +10,7 @@ require('../../css/app.css');
 
 // Javascript
 const jQuery = require('jquery');
+require('regenerator-runtime/runtime');
 require('foundation-sites');
 const Constants = require('../../../Constants');
 const {

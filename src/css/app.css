@@ -26,7 +26,7 @@ a:visited,
 button {
 	font-family: 'Montserrat', Verdana, Arial, Helvetica, sans-serif;
 	font-weight: 900;
-	color: var(--app-dark-blue);
+	color: var(--app-darker-blue);
 	line-height: 1.3;
 }
 p,
@@ -35,9 +35,9 @@ tr,
 th,
 td {
 	font-family: 'Montserrat', Verdana, Arial, Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 180%;
-	color: var(--app-dark-blue);
+	color: var(--app-darker-blue);
 }
 input,
 select,
@@ -45,7 +45,7 @@ textarea,
 label {
 	font-family: 'Montserrat', Verdana, Arial, Helvetica, sans-serif !important;
 	font-weight: 700 !important;
-	color: var(--app-dark-blue);
+	color: var(--app-darker-blue);
 }
 input {
 	-webkit-appearance: none;
@@ -113,6 +113,7 @@ button:focus {
 	position: fixed;
 	display: flex;
 	align-items: center;
+	z-index: 99;
 }
 .footer {
 	height: 150px;
@@ -120,6 +121,9 @@ button:focus {
 	background-color: var(--app-lighter-blue);
 	display: flex;
 	align-items: center;
+}
+.header-offset {
+	margin-top: 80px;
 }
 .home-page {
 	height: 600px;
@@ -236,6 +240,28 @@ button:focus {
 /* LEGAL CONTENT */
 
 @media only screen {
+	.legal-content {
+		padding-top: 20px;
+		padding-bottom: 80px;
+	}
+	.legal-text-content {
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+	.legal-title,
+	.legal-text-title {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-align: left;
+	}
+	.legal-title h1,
+	.legal-text-title h1 {
+		font-size: 1.8rem;
+		margin: 8px 0px;
+	}
+	.legal-text-title .logo-icon {
+		margin-left: 0px !important;
+	}
 	table.settings-table {
 		font-size: 0.775rem;
 	}
@@ -256,6 +282,44 @@ button:focus {
 	table.settings-table th {
 		padding: 1.875rem;
 	}
+}
+@media only screen and (min-width: 43.9375em) {
+	.legal-content {
+		padding-top: 50px;
+		padding-bottom: 150px;
+	}
+	.legal-text-content {
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+	.legal-title,
+	.legal-text-title {
+		padding-top: 70px;
+		padding-bottom: 70px;
+		text-align: center;
+	}
+	.legal-title h1,
+	.legal-text-title h1 {
+		font-size: 3rem;
+		margin: 8px 0px;
+	}
+	.legal-text-title .logo-icon {
+		margin-left: auto !important;
+	}
+}
+.legal-content {
+	background-color: var(--app-lighter-blue);
+	border-top: 1px solid var(--app-border-grey);
+}
+.legal-text-content {
+	background-color: var(--app-white);
+	border-top: 1px solid var(--app-border-grey);
+}
+.legal-title {
+	background-color: var(--app-white);
+}
+.legal-text-title {
+	background-color: var(--app-lighter-blue);
 }
 table.settings-table {
 	border-collapse: collapse;
@@ -328,15 +392,6 @@ table.settings-table th {
 .cookie-settings-container h2 {
 	padding-bottom: 5px;
 }
-.usability-description-container {
-	background-color: var(--app-lighter-blue);
-	padding: 1.975rem;
-	border-radius: 8px;
-	margin: 35px 0px -20px;
-}
-.usability-description-container p {
-	margin: 0px;
-}
 .cookies-settings-row {
 	margin-top: 30px;
 	display: flex;
@@ -358,18 +413,26 @@ table.settings-table th {
 	align-items: center;
 }
 .cookies-settings-row .custom-checkbox {
+	width: 27px;
+	height: 27px;
+	background-color: transparent;
+	border-radius: 4px;
+	outline: 0;
+	border: solid 2px var(--app-dark-blue);
+	display: inline-block;
+	margin-right: 17px;
+	cursor: pointer;
 	box-shadow: none;
-	border: 2px solid var(--app-medium-light-gray);
-	background-color: var(--app-lighter-blue);
-	margin: 0px;
 }
 .cookies-settings-row .custom-checkbox:focus,
 .cookies-settings-row .custom-checkbox:active,
 .cookies-settings-row .custom-checkbox.active {
+	outline: 0;
+	border: solid 2px var(--app-dark-blue);
 	background-image: url('../img/checkmark-icon.png');
 	background-position: center;
 	background-size: cover;
-	border: 2px solid var(--app-darker-blue);
+	background-color: var(--app-dark-blue);
 	background-color: var(--app-darker-blue);
 }
 .custom-checkbox.disabled {
