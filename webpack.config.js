@@ -169,10 +169,10 @@ module.exports = function () {
 			new MiniCssExtractPlugin({
 				filename: isEnvDevelopment ? 'css/[name].bundle.css' : 'css/[name].bundle.[chunkhash].css',
 			}),
-			new CopyPlugin({
+			!isEnvDevelopment && new CopyPlugin({
 				patterns: [
-					!isEnvDevelopment && { from: 'src/img', to: 'img' },
-					...(!isEnvDevelopment ? ejsParams : [])
+					{ from: 'src/img', to: 'img' },
+					...(ejsParams)
 				].filter(Boolean)
 			})
 		].filter(Boolean)

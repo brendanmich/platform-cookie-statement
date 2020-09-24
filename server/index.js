@@ -127,5 +127,5 @@ const serverPort = process.env.PORT || 1337;
 const appPort = process.env.PORT || 3000;
 const httpServer = http.createServer(app);
 httpServer.listen(serverPort, () => {
-	console.log(`our-wave-stories-app running on port ${appPort}.`);
+	console.log(`platform-cookie-statement running on port ${appPort}.`);
 });

@@ -1,4 +1,4 @@
-<% if (state.show_cookie_bar === true) { // Display cookie consent bar in EU territories %>
+<% if (state.show_cookie_bar === true || process.env.ENV === 'development') { // Display cookie consent bar in EU territories %>
 
 	<!-- Cookie Consent Bar -->
     <div class="cookie-bar screen-overall-padding" id="cookie-consent-bar">

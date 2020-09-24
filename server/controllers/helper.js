@@ -77,20 +77,14 @@ const generateComponentState = (req, res) => {
 
 	// Update component state
 	const data = {
-		statie: {
+		state: {
 			show_cookie_bar: !consentActionTaken,
 			consent: {
 				performance_enabled: performanceEnabled,
 				analytics_enabled: analyticsEnabled,
 				targeting_enabled: targetingEnabled
 			},
-			analytics: {
-				gtm_id: (req.isCore) ? process.env.GTM_ID : req.entity.analytics.gtm_id,
-				hotjar_id: (req.isCore) ? process.env.HOTJAR_ID : req.entity.analytics.hotjar_id,
-				hotjar_version: (req.isCore) ? process.env.HOTJAR_VERSION : req.entity.analytics.hotjar_version,
-			},
-			query: req.query,
-			is_core: req.isCore
+			query: req.query
 		}
 	};
 

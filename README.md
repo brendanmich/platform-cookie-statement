@@ -12,6 +12,10 @@ Sample platform with GDPR Cookie Statement and Node.js cookie handlers 🍪
 
 -   If Google Tag Manager is included, the `dataLayer` triggers specified in `src/js/modules/cookies.js` must be added to your GTM workspace and enabled to activate any attached services
 
+## Note
+
+The example Cookie Statement in this project does not constitute legal advice. I'm not a lawyer 😉
+
 ## Running Locally
 
 #### 1. Setup
@@ -25,14 +29,7 @@ Sample platform with GDPR Cookie Statement and Node.js cookie handlers 🍪
 -   Run `npm install` and ensure `node_modules` builds with no errors
 -   Clean the `build` build folder by running `npm run clean`
 
-#### 3. Set Up Database
-
--   Install mongo locally using http://docs.mongodb.org/master/tutorial/install-mongodb-on-os-x/
--   Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with Control-D
--   Run `mongod --port 27017` to run the database
--   Run `npm run seed` to seed the database before development
-
-#### 4. Run in Specified Environment
+#### 3. Run in Specified Environment
 
 -   The site is built to automatically handle environmental vars and code-watching depending on the specified environment. The available environment start commands are:
 
@@ -43,10 +40,8 @@ Sample platform with GDPR Cookie Statement and Node.js cookie handlers 🍪
 
 -   The `development` environment is optimized for faster development by running a separate development server and removing bundle hashing
 
-#### 5. Time to Develop! 🤓
+#### 4. Time to Develop! 🤓
 
--   By default the server will use a path of /\_api/v1 for the API routes. To change this, update the `.env` file before launching the server.
--   You now have a database named "wave" that contains your app data
 -   The default running port for the server is 1337
 -   The default running port for the app is 3000
 
