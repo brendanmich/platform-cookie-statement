@@ -14,7 +14,7 @@ Sample platform with GDPR Cookie Statement and Node.js cookie handlers 🍪
 
 ## Note
 
-The example Cookie Statement in this project does not constitute legal advice. I'm not a lawyer 😉
+The example Cookie Statement in this project does not constitute legal advice. I am unfortunately not a lawyer 😉
 
 ## Running Locally
 
