@@ -44,8 +44,6 @@ app.use(async (req, res) => {
 
 app.use(async (err, req, res, next) => { /* eslint-disable-line no-unused-vars */ /* next is required */
 
-	console.log(err);
-
 	// Create component data
 	const data = generateComponentState(req, res);
 
